@@ -1,0 +1,771 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Demo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+
+
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+              rel="stylesheet">
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body ng-app="BlankApp" ng-cloak ng-controller="MainCtrl as vm">
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+
+
+
+        <div class="container-fluid">
+
+            <header>
+
+
+            <div class="row">
+
+
+
+
+
+
+                    <!-- Image and text -->
+                    <nav class="navbar navbar-full">
+                        <a class="navbar-brand" href="#">
+                            <img src="img/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+                            НАЗВАНИЕ СИСТЕМЫ
+                        </a>
+
+
+
+                        <ul class="nav navbar-nav float-md-right">
+                            <li class="nav-item">
+
+
+
+
+                            </li>
+
+                        </ul>
+
+
+                    </nav>
+
+
+
+
+
+
+
+
+
+        </div>
+
+        </header>
+
+
+
+
+        <main>
+
+
+
+
+
+                <div class="row">
+                    <div class="col-md-12">
+
+
+
+                        <md-content class="shadow__default">
+
+
+
+
+                            <md-tabs md-border-bottom class="custom__tab__height">
+                                <md-tab label="Пациент">
+                                    <md-content class="md-padding">
+
+                                        <form name="formdemo">
+
+
+                                        <div class="row">
+
+
+                                            <div class="col-md-6">
+
+
+
+                                                <md-card>
+                                                    <md-card-title>
+                                                        <md-card-title-text>
+                                                            <md-input-container class="md-icon-float md-block custom__block__search">
+
+
+                                                                <label>Поиск пациента</label>
+                                                                <input ng-model="vm.data.search" type="search">
+
+                                                                <md-icon md-svg-src="img/ic_search_black_48px.svg" style="display:inline-block; cursor: pointer"></md-icon>
+
+
+
+
+
+
+                                                            </md-input-container>
+
+
+
+
+                                                            <div class="custom__radio">
+
+
+
+                                                                <md-radio-group ng-model="vm.data.groupSearch" layout="row">
+
+
+                                                                    <md-radio-button value="0">РПН</md-radio-button>
+                                                                    <md-radio-button value="1">БГ</md-radio-button>
+                                                                </md-radio-group>
+
+
+
+
+                                                            </div>
+                                                        </md-card-title-text>
+
+                                                    </md-card-title>
+
+
+                                                </md-card>
+
+
+
+
+
+
+
+
+
+
+                                            </div>
+
+
+
+                                            <div class="col-md-6">
+
+
+
+                                                <md-card>
+                                                    <md-card-title>
+                                                        <md-card-title-text>
+                                                            <md-input-container class="md-icon-float md-block custom__block__search">
+
+                                                                <md-icon md-svg-src="img/ic_location_city_black_48px.svg"></md-icon>
+
+                                                                <p>Житель город/село</p>
+
+                                                                <md-select ng-model="weapon" placeholder="Не выбрано" class="md-no-underline">
+                                                                    <md-option value="axe">Город</md-option>
+                                                                    <md-option value="selo">Село</md-option>
+
+                                                                </md-select>
+
+
+
+
+
+
+
+                                                            </md-input-container>
+
+
+
+
+
+                                                        </md-card-title-text>
+
+                                                    </md-card-title>
+
+
+                                                </md-card>
+
+
+
+
+
+
+
+
+
+
+                                            </div>
+
+
+                                        </div>
+
+
+                                        <div class="row">
+
+
+                                            <div class="col-md-6">
+
+
+
+                                                <md-card>
+                                                    <md-card-title>
+                                                        <md-card-title-text>
+                                                            <md-input-container class="md-icon-float md-block custom__block__search">
+
+
+                                                                <label>Поиск по адресу</label>
+                                                                <input ng-model="vm.search" type="search">
+
+                                                                <md-icon md-svg-src="img/ic_search_black_48px.svg" style="display:inline-block; cursor: pointer"></md-icon>
+
+
+
+
+
+
+                                                            </md-input-container>
+
+
+
+
+
+                                                        </md-card-title-text>
+
+                                                    </md-card-title>
+
+
+                                                </md-card>
+
+
+
+
+
+
+
+
+
+
+                                            </div>
+
+                                            <div class="col-md-6">
+
+
+
+                                                <md-card>
+                                                    <md-card-title>
+                                                        <md-card-title-text>
+                                                            <md-input-container class="md-icon-float md-block custom__block__search">
+
+                                                                <md-icon md-svg-src="img/ic_perm_contact_calendar_black_48px.svg"></md-icon>
+
+                                                                <label>Организация прикрепления</label>
+                                                                <input ng-model="vm.phone" type="tel">
+
+
+
+
+
+
+
+                                                            </md-input-container>
+
+
+
+
+
+                                                        </md-card-title-text>
+
+                                                    </md-card-title>
+
+
+                                                </md-card>
+
+
+
+
+
+
+
+
+
+
+                                            </div>
+
+                                        </div>
+
+
+
+
+
+                                        <div class="row">
+
+
+                                            <div class="col-md-6">
+
+
+
+                                                <md-card>
+                                                    <md-card-title>
+                                                        <md-card-title-text>
+                                                            <md-input-container class="md-icon-float md-block custom__block__search">
+
+                                                                <md-icon md-svg-src="img/ic_phone_black_48px.svg"></md-icon>
+
+                                                                <label>Телефон</label>
+                                                                <input type="tel" name="clientPhone" ng-model="vm.data.clientPhone"
+                                                                       minlength="10" maxlength="100" ng-pattern="/^[0-9]*$/" required>
+
+
+                                                                <div ng-messages="formdemo.clientPhone.$error" role="alert">
+
+
+                                                                    <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+
+                                                                        Ваш телефон должен быть не менее 10 и не более 100 символов и состоять только из цифр.
+                                                                    </div>
+                                                                </div>
+
+
+
+
+                                                            </md-input-container>
+
+
+
+
+
+                                                        </md-card-title-text>
+
+                                                    </md-card-title>
+
+
+                                                </md-card>
+
+
+
+
+
+
+
+
+
+                                            </div>
+
+                                            <div class="col-md-6">
+
+
+
+                                                <md-card>
+                                                    <md-card-title>
+                                                        <md-card-title-text>
+                                                            <md-input-container class="md-icon-float md-block custom__block__search">
+
+                                                                <md-icon md-svg-src="img/ic_language_black_48px.svg"></md-icon>
+
+                                                                <p>Категория гражданства</p>
+
+                                                                <md-select ng-model="weapon" placeholder="Не выбрано" class="md-no-underline">
+                                                                    <md-option value="0">Демо</md-option>
+                                                                    <md-option value="1">Демо</md-option>
+                                                                    <md-option value="2">Демо</md-option>
+                                                                    <md-option value="3">Демо</md-option>
+
+                                                                </md-select>
+
+
+
+
+
+
+
+                                                            </md-input-container>
+
+
+
+
+
+                                                        </md-card-title-text>
+
+                                                    </md-card-title>
+
+
+                                                </md-card>
+
+
+
+
+
+
+
+
+
+
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row">
+
+
+                                            <div class="col-md-6">
+
+
+
+                                                <md-card>
+                                                    <md-card-title>
+                                                        <md-card-title-text>
+                                                            <md-input-container class="md-icon-float md-block custom__block__search">
+
+                                                                <md-icon md-svg-src="img/ic_work_black_48px.svg"></md-icon>
+
+                                                                <label>Место работы/Учебы</label>
+                                                                <input ng-model="vm.phone" type="tel">
+
+
+
+
+
+
+
+                                                            </md-input-container>
+
+
+
+
+
+                                                        </md-card-title-text>
+
+                                                    </md-card-title>
+
+
+                                                </md-card>
+
+
+
+
+
+
+
+
+
+
+                                            </div>
+
+                                            <div class="col-md-6">
+
+
+
+                                                <md-card>
+                                                    <md-card-title>
+                                                        <md-card-title-text>
+                                                            <md-input-container class="md-icon-float md-block custom__block__search">
+
+                                                                <md-icon md-svg-src="img/ic_person_pin_circle_black_48px.svg"></md-icon>
+
+                                                                <label>Гражданство</label>
+                                                                <input ng-model="vm.phone" type="tel">
+
+
+
+
+
+
+
+                                                            </md-input-container>
+
+
+
+
+
+                                                        </md-card-title-text>
+
+                                                    </md-card-title>
+
+
+                                                </md-card>
+
+
+
+
+
+
+
+
+
+
+                                            </div>
+
+
+
+                                        </div>
+
+
+
+                                        <div class="row">
+
+
+                                            <div class="col-md-6">
+
+
+
+                                                <md-card>
+                                                    <md-card-title>
+                                                        <md-card-title-text>
+                                                            <md-input-container class="md-icon-float md-block custom__block__search">
+
+                                                                <md-icon md-svg-src="img/ic_extension_black_48px.svg"></md-icon>
+
+                                                                <p>Категория льготности</p>
+
+                                                                <md-select ng-model="weapon" placeholder="Нет льгот" class="md-no-underline">
+                                                                    <md-option value="axe">Есть льготы</md-option>
+                                                                    <md-option value="11">Демо</md-option>
+
+                                                                </md-select>
+
+
+
+
+
+
+
+                                                            </md-input-container>
+
+
+
+
+
+                                                        </md-card-title-text>
+
+                                                    </md-card-title>
+
+
+                                                </md-card>
+
+
+
+
+
+
+
+
+
+
+                                            </div>
+
+
+
+                                        </div>
+
+
+
+
+                                        <div class="row">
+
+
+
+
+                                            <div class="col-md-6">
+
+
+
+                                                <md-card>
+                                                    <md-card-title>
+                                                        <md-card-title-text>
+
+
+
+                                                            <md-input-container class="md-block">
+
+                                                                <label>Примечание</label>
+                                                                <md-icon md-svg-src="img/ic_description_black_48px.svg"></md-icon>
+
+
+                                                                <textarea ng-model="user.biography" md-maxlength="150" rows="5" md-select-on-focus></textarea>
+                                                            </md-input-container>
+
+
+
+
+                                                        </md-card-title-text>
+
+                                                    </md-card-title>
+
+
+                                                </md-card>
+
+
+
+
+
+
+
+
+
+
+                                            </div>
+
+
+
+
+
+
+                                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            </form>
+
+
+                                        <div class="row">
+                                            <div class="col-md-1">
+
+
+
+                                                <md-button ng-click="formdemo.$valid && vm.submitForm()">Сохранить</md-button>
+
+
+
+                                            </div>
+
+
+
+
+                                        </div>
+
+
+
+                                    </md-content>
+                        </md-tab>
+
+
+
+
+
+                                <md-tab label="Направление">
+                                    <md-content class="md-padding">
+                                        <h1 class="md-display-2">Направление</h1>
+
+                                    </md-content>
+                                </md-tab>
+                                <md-tab label="Прикрепить файл">
+                                    <md-content class="md-padding">
+                                        <h1 class="md-display-2">Прикрепить файл</h1>
+                                   </md-content>
+                                </md-tab>
+                            </md-tabs>
+
+
+
+
+
+                        </md-content>
+
+
+
+                    </div>
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+        </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+
+        <script src="js/tether.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+        <script src="js/plugins.js"></script>
+
+
+
+        <!-- Angular Material requires Angular.js Libraries -->
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-resource.js"></script>
+
+
+        <!-- Angular Material Library -->
+        <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+
+
+
+        <script src="js/main.js"></script>
+
+
+    </body>
+</html>
